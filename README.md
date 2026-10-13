@@ -2,13 +2,14 @@
 
 High-Resolution District-Level Drought Monitoring for Parametric Insurance
 
-📌 **Project Objective**  
-Agriculture in Ethiopia is 94 % rain‑fed, with production concentrated in the Central Highlands. This study provides a high‑resolution (ADM2/District level) agricultural drought analysis focusing on the Kiremt rains (June–September) which support the critical Meher harvest.  
+📌 Project Objective
+Agriculture in Ethiopia is 94% rainfed, with production concentrated in the Central Highlands. This study provides a high-resolution (ADM2/District level) agricultural drought analysis focusing on the Kiremt rains (June–September) which support the critical Meher harvest.
+The goal is to develop and validate the Agricultural Reanalysis Index (ARI) a multi-indicator tool designed to reduce "Basis Risk" in parametric insurance by integrating atmospheric demand, soil moisture supply, and thermal stress.
 
-The goal is to develop and validate the Agricultural Reanalysis Index (ARI), a multi‑indicator tool designed to reduce *Basis Risk* in parametric insurance by integrating atmospheric demand, soil‑moisture supply, and thermal stress. **During validation, the Vegetation Condition Index (VCI) emerged as the top‑performing indicator (AUC = 0.958), making it the primary trigger for insurance payouts.**
+**During validation, the Vegetation Condition Index (VCI) emerged as the top‑performing indicator (AUC = 0.958), making it the primary trigger for insurance payouts.**
 
-🛠 **Methodology & Indices**
-**The analysis processes 25 years of climate and satellite data to calculate five distinct drought dimensions:**
+🛠 Methodology & Indices
+The analysis processes 25 years of climate and satellite data to calculate five distinct drought dimensions:
 
 1. Standardized Precipitation Index (SPI-3)
 Data: CHIRPS (5km resolution).
@@ -32,9 +33,12 @@ VHI (Vegetation Health Index): A 50/50 blend of moisture and temperature stress.
 
 5. Agricultural Reanalysis Index (ARI) - The "Master" Trigger
 The study evolves through three integrated iterations:
-IADI: 0.4 × SPEI + 0.6 × SSI (Balanced Atmosphere/Soil).
-IASI: 0.2 × SPEI + 0.3 × SSI + −0.5 × TCI_Z (Heavily weighted for thermal stress).
-ARI (Final): Rolling3M(0.2×SPEI+0.5×SSI_Root+0.3×TCI_Z).
+- **IADI**: 0.4 × SPEI + 0.6 × SSI (Balanced Atmosphere/Soil).
+- **IASI**: 0.2 × SPEI + 0.3 × SSI – 0.5 × TCI_Z (Heavily weighted for thermal stress).
+- **ARI (Final)**: Rolling3M(0.2×SPEI + 0.5×SSI_Root + 0.3×TCI_Z).
+
+> **Implementation note** – The actual calculations for IADI, IASI, and the final ARI are performed in the notebook `analysis/ari_calculation.ipynb`. That notebook reads the pre‑processed climate and satellite variables, applies the formulas above, and outputs the three‑month rolling ARI series used for the insurance trigger.
+
 
 📈 Visual Outputs & Results
 1. Rainfall Seasonality
@@ -54,7 +58,7 @@ Correlation analysis proves that Land Surface Temperature (LST) has a stronger n
 ![alt text](output/Inter_Variable_Correlation_(Validating_Thermal_&_Vegetation_Links).png)
 
 9. Model Validation (ROC Analysis)
-The ARI achieved an Accuracy (AUC) of 0.798, outperforming the traditional SPI (0.769). This validates the ARI as the most reliable tool for triggering insurance payouts while minimizing Basis Risk.
+The VCI achieved an Accuracy (AUC) of 0.958, surpassing the ARI (0.798) and the traditional SPI (0.769). This validates the VCI as the most reliable tool for triggering insurance payouts while minimizing Basis Risk.
 ![alt text](output/Consolidated_ROC_Analysis.png)
 
 10. Soil Moisture Lag
