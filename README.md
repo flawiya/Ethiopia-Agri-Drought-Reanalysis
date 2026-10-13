@@ -2,9 +2,10 @@
 
 High-Resolution District-Level Drought Monitoring for Parametric Insurance
 
-📌 Project Objective
-Agriculture in Ethiopia is 94% rainfed, with production concentrated in the Central Highlands. This study provides a high-resolution (ADM2/District level) agricultural drought analysis focusing on the Kiremt rains (June–September) which support the critical Meher harvest.
-The goal is to develop and validate the Agricultural Reanalysis Index (ARI) a multi-indicator tool designed to reduce "Basis Risk" in parametric insurance by integrating atmospheric demand, soil moisture supply, and thermal stress.
+📌 **Project Objective**  
+Agriculture in Ethiopia is 94 % rain‑fed, with production concentrated in the Central Highlands. This study provides a high‑resolution (ADM2/District level) agricultural drought analysis focusing on the Kiremt rains (June–September) which support the critical Meher harvest.  
+
+The goal is to develop and validate the Agricultural Reanalysis Index (ARI), a multi‑indicator tool designed to reduce *Basis Risk* in parametric insurance by integrating atmospheric demand, soil‑moisture supply, and thermal stress. **During validation, the Vegetation Condition Index (VCI) emerged as the top‑performing indicator (AUC = 0.958), making it the primary trigger for insurance payouts.**
 
 🛠 Methodology & Indices
 The analysis processes 25 years of climate and satellite data to calculate five distinct drought dimensions:
