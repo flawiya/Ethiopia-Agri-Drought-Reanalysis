@@ -7,8 +7,8 @@ Agriculture in Ethiopia is 94 % rain‑fed, with production concentrated in th
 
 The goal is to develop and validate the Agricultural Reanalysis Index (ARI), a multi‑indicator tool designed to reduce *Basis Risk* in parametric insurance by integrating atmospheric demand, soil‑moisture supply, and thermal stress. **During validation, the Vegetation Condition Index (VCI) emerged as the top‑performing indicator (AUC = 0.958), making it the primary trigger for insurance payouts.**
 
-🛠 Methodology & Indices
-The analysis processes 25 years of climate and satellite data to calculate five distinct drought dimensions:
+🛠 **Methodology & Indices**
+**The analysis processes 25 years of climate and satellite data to calculate five distinct drought dimensions:**
 
 1. Standardized Precipitation Index (SPI-3)
 Data: CHIRPS (5km resolution).
